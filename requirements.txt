@@ -6,7 +6,7 @@ pinecone[grpc]
 langchain-pinecone
 langchain_community
 langchain_openai
-langchain_experimental 
-sentence-transformers==3.0.1
-huggingface_hub==0.23.4
-langchain-huggingface==0.0.3
+langchain_experimental
+langchain-huggingface
+sentence-transformers
+huggingface_hub
