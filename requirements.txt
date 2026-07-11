@@ -10,3 +10,4 @@ langchain_experimental
 langchain-huggingface
 sentence-transformers
 huggingface_hub
+faiss-cpu
