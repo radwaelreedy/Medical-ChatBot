@@ -38,7 +38,7 @@ retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":
 
 
 llm = ChatOpenAI(
-    model="openai/gpt-4o-mini",
+    model="meta-llama/llama-3.1-8b-instruct",
     temperature=0.4,
     max_tokens=500,
     openai_api_key=os.environ.get("OPENROUTER_API_KEY"),
