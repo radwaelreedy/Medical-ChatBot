@@ -45,7 +45,6 @@ llm = ChatOpenAI(
     openai_api_base="https://openrouter.ai/api/v1"
 )
 
-# لاحظ إضافة MessagesPlaceholder("chat_history") هنا
 prompt = ChatPromptTemplate.from_messages(
     [
         ("system", system_prompt),
@@ -57,7 +56,6 @@ prompt = ChatPromptTemplate.from_messages(
 question_answer_chain = create_stuff_documents_chain(llm, prompt)
 rag_chain = create_retrieval_chain(retriever, question_answer_chain)
 
-# قاموس يخزن تاريخ المحادثة لكل مستخدم (session) لوحده
 store = {}
 
 def get_session_history(session_id: str) -> BaseChatMessageHistory:
@@ -76,7 +74,6 @@ conversational_rag_chain = RunnableWithMessageHistory(
 
 @app.route("/")
 def index():
-    # لو المستخدم مالوش session_id لسه، اعمله واحد جديد
     if "session_id" not in session:
         session["session_id"] = str(uuid.uuid4())
     return render_template('chat.html')

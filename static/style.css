@@ -5,15 +5,15 @@ body {
   height: 100vh;
   background: #ccc;
   font-family: Arial, sans-serif;
-  margin: 0; /* لضمان عدم وجود هوامش غريبة في الشاشة */
+  margin: 0; 
 }
 
 .chat-container {
-  width: 90%;            /* بياخد 90% من عرض الشاشة المتاحة */
-  max-width: 850px;      /* بيمنعه إنه يفرش بزيادة في الشاشات الكبيرة ويفضل ملموم ومريح للعين */
-  height: 85vh;          /* بياخد 85% من طول الشاشة المتاحة */
+  width: 90%;            
+  max-width: 850px;      
+  height: 85vh;          
   background: #fff;
-  border-radius: 12px;   /* خليت الحواف أنعم شوية تماشياً مع الحجم الجديد */
+  border-radius: 12px;  
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -23,28 +23,28 @@ body {
 .chat-header {
   background: #000;
   color: #fff;
-  padding: 20px;         /* زيادة الـ padding عشان يتماشى مع الحجم الكبير */
-  font-size: 22px;       /* تكبير خط العنوان حاجة بسيطة */
+  padding: 20px;         
+  font-size: 22px;       
   font-weight: bold;
 }
 
 .chat-messages {
   flex: 1;
-  padding: 20px;         /* زيادة المسافات الداخلية لتسهيل القراءة */
+  padding: 20px;         
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;             /* زيادة المسافة بين الرسائل عشان تبان منظمة */
+  gap: 15px;             
 }
 
 .bot-msg {
   align-self: flex-start;
   border: 1px solid #ccc;
   border-radius: 20px;
-  padding: 12px 18px;    /* مساحة داخلية أوسع للرسالة */
-  max-width: 75%;        /* تقليل الـ max-width عشان الرسالة المتطورة ماتاخدش العرض كله بشكل خطي ممتد */
-  font-size: 16px;       /* تكبير خط القراءة */
-  line-height: 1.5;      /* تباعد الأسطر لراحة العين أثناء قراءة النصوص الطبية */
+  padding: 12px 18px;    
+  max-width: 75%;        
+  font-size: 16px;       
+  line-height: 1.5;      
 }
 
 .user-msg {
@@ -61,15 +61,15 @@ body {
 .chat-input {
   display: flex;
   border-top: 1px solid #ddd;
-  padding: 15px;         /* زيادة مساحة شريط الكتابة */
-  background: #fafafa;   /* تمييز خلفية شريط الكتابة */
+  padding: 15px;         
+  background: #fafafa;   
 }
 
 .chat-input input {
   flex: 1;
   border: none;
   outline: none;
-  font-size: 16px;       /* تكبير خط الكتابة */
+  font-size: 16px;       
   background: transparent;
 }
 
@@ -77,6 +77,6 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 22px;       /* تكبير أيقونة الإرسال */
+  font-size: 22px;       
   padding: 0 10px;
 }

@@ -26,7 +26,7 @@ async function sendMessage() {
 
     if (text === "") return;
 
-    // 1. عرض رسالة المستخدم في الشات
+    
     const userDiv = document.createElement("div");
     userDiv.className = "user-msg";
     userDiv.textContent = text;
@@ -35,7 +35,7 @@ async function sendMessage() {
     messages.scrollTop = messages.scrollHeight;
 
     try {
-        // 2. إرسال السؤال فعلياً لسيرفر الـ Flask عبر الـ /get endpoint
+        
         const response = await fetch("/get", {
             method: "POST",
             headers: { 
@@ -44,10 +44,10 @@ async function sendMessage() {
             body: "msg=" + encodeURIComponent(text)
         });
 
-        // 3. استقبال الرد الحقيقي القادم من الـ RAG Chain
+        
         const botReply = await response.text();
 
-        // 4. عرض رد البوت الحقيقي في الشات
+        
         const botDiv = document.createElement("div");
         botDiv.className = "bot-msg";
         botDiv.textContent = botReply;
