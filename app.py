@@ -38,7 +38,7 @@ retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":
 
 
 llm = ChatOpenAI(
-    model="anthropic/claude-3.5-haiku",
+    model="anthropic/claude-haiku-4.5",
     temperature=0.4,
     max_tokens=500,
     openai_api_key=os.environ.get("OPENROUTER_API_KEY"),
